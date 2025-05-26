@@ -63,15 +63,15 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact</h3>
             <address className="not-italic">
-              <p className="text-foreground/70 mb-2">New York, NY</p>
+              <p className="text-foreground/70 mb-2">Suceava, Ro</p>
               <p className="text-foreground/70 mb-2">
                 <a href="mailto:hello@portfolio.dev" className="hover:text-primary transition-colors">
-                  hello@portfolio.dev
+                  daniel@portfolio.dev
                 </a>
               </p>
               <p className="text-foreground/70 mb-2">
                 <a href="tel:+12345678900" className="hover:text-primary transition-colors">
-                  +1 (234) 567-8900
+                  {/* +1 (234) 567-8900 */}
                 </a>
               </p>
             </address>

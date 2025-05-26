@@ -91,9 +91,9 @@ export default function Contact() {
                       <div>
                         <h4 className="font-medium">Location</h4>
                         <address className="not-italic text-muted-foreground mt-1">
-                          123 Developer Street<br />
-                          New York, NY 10001<br />
-                          United States
+                          Zamca<br />
+                          Suceava , SV 720208<br />
+                          Romania
                         </address>
                       </div>
                     </div>
@@ -105,7 +105,7 @@ export default function Contact() {
                       <div>
                         <h4 className="font-medium">Email</h4>
                         <a href="mailto:hello@portfolio.dev" className="text-muted-foreground hover:text-primary transition-colors mt-1 block">
-                          hello@portfolio.dev
+                          {/* hello@portfolio.dev */}
                         </a>
                       </div>
                     </div>
@@ -117,7 +117,7 @@ export default function Contact() {
                       <div>
                         <h4 className="font-medium">Phone</h4>
                         <a href="tel:+12345678900" className="text-muted-foreground hover:text-primary transition-colors mt-1 block">
-                          +1 (234) 567-8900
+                          {/* +1 (234) 567-8900 */}
                         </a>
                       </div>
                     </div>
@@ -146,7 +146,7 @@ export default function Contact() {
                             <FormItem>
                               <FormLabel>Your Name</FormLabel>
                               <FormControl>
-                                <Input placeholder="John Doe" {...field} />
+                                <Input placeholder="Daniel Andronache" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -160,7 +160,7 @@ export default function Contact() {
                             <FormItem>
                               <FormLabel>Your Email</FormLabel>
                               <FormControl>
-                                <Input placeholder="john@example.com" {...field} />
+                                <Input placeholder="daniel@example.com" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
