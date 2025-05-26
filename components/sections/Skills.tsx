@@ -93,7 +93,7 @@ export default function Skills() {
                       <span className="font-medium">{skill.name}</span>
                       <span className="text-muted-foreground">{skill.level}%</span>
                     </div>
-                    <Progress value={skill.level} className="h-2" indicatorClassName="bg-chart-2" />
+                    <Progress value={skill.level} className="h-2" />
                   </div>
                 ))}
               </div>
@@ -117,7 +117,7 @@ export default function Skills() {
                       <span className="font-medium">{skill.name}</span>
                       <span className="text-muted-foreground">{skill.level}%</span>
                     </div>
-                    <Progress value={skill.level} className="h-2" indicatorClassName="bg-chart-4" />
+                    <Progress value={skill.level} className="h-2" />
                   </div>
                 ))}
               </div>
