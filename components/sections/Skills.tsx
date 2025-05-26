@@ -1,0 +1,125 @@
+'use client';
+
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { Progress } from '@/components/ui/progress';
+
+const skillsData = [
+  { name: 'React / Next.js', level: 90, category: 'frontend' },
+  { name: 'TypeScript / JavaScript', level: 85, category: 'frontend' },
+  { name: 'HTML5 / CSS3', level: 92, category: 'frontend' },
+  { name: 'Tailwind CSS', level: 88, category: 'frontend' },
+  { name: 'Node.js', level: 80, category: 'backend' },
+  { name: 'Express.js', level: 78, category: 'backend' },
+  { name: 'MongoDB', level: 75, category: 'backend' },
+  { name: 'PostgreSQL', level: 72, category: 'backend' },
+  { name: 'Figma / Adobe XD', level: 85, category: 'design' },
+  { name: 'UI/UX Design', level: 80, category: 'design' },
+  { name: 'Git / GitHub', level: 88, category: 'tools' },
+  { name: 'Docker', level: 70, category: 'tools' },
+];
+
+export default function Skills() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+  // Filter skills by category
+  const frontendSkills = skillsData.filter(skill => skill.category === 'frontend');
+  const backendSkills = skillsData.filter(skill => skill.category === 'backend');
+  const designTools = skillsData.filter(skill => 
+    skill.category === 'design' || skill.category === 'tools'
+  );
+
+  return (
+    <section id="skills" className="py-20 bg-muted/20">
+      <div className="container mx-auto px-4">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-5xl mx-auto"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">My Skills</h2>
+          <div className="w-20 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            I've worked with a variety of technologies in the web development world.
+            Here's an overview of my technical skills and proficiency levels.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <h3 className="text-xl font-semibold mb-6 flex items-center">
+                <span className="w-2 h-8 bg-chart-1 mr-3 inline-block rounded-full"></span>
+                Frontend Development
+              </h3>
+              
+              <div className="space-y-6">
+                {frontendSkills.map((skill, index) => (
+                  <div key={index}>
+                    <div className="flex justify-between mb-2">
+                      <span className="font-medium">{skill.name}</span>
+                      <span className="text-muted-foreground">{skill.level}%</span>
+                    </div>
+                    <Progress value={skill.level} className="h-2" indicatorClassName="bg-chart-1" />
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <h3 className="text-xl font-semibold mb-6 flex items-center">
+                <span className="w-2 h-8 bg-chart-2 mr-3 inline-block rounded-full"></span>
+                Backend Development
+              </h3>
+              
+              <div className="space-y-6">
+                {backendSkills.map((skill, index) => (
+                  <div key={index}>
+                    <div className="flex justify-between mb-2">
+                      <span className="font-medium">{skill.name}</span>
+                      <span className="text-muted-foreground">{skill.level}%</span>
+                    </div>
+                    <Progress value={skill.level} className="h-2" indicatorClassName="bg-chart-2" />
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="md:col-span-2"
+            >
+              <h3 className="text-xl font-semibold mb-6 flex items-center">
+                <span className="w-2 h-8 bg-chart-4 mr-3 inline-block rounded-full"></span>
+                Design & Tools
+              </h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {designTools.map((skill, index) => (
+                  <div key={index}>
+                    <div className="flex justify-between mb-2">
+                      <span className="font-medium">{skill.name}</span>
+                      <span className="text-muted-foreground">{skill.level}%</span>
+                    </div>
+                    <Progress value={skill.level} className="h-2" indicatorClassName="bg-chart-4" />
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
