@@ -33,8 +33,8 @@ export default function About() {
             >
               <div className="relative w-full h-[400px] overflow-hidden rounded-lg">
                 <Image
-                  src="https://images.pexels.com/photos/4195342/pexels-photo-4195342.jpeg"
-                  alt="John Doe"
+                  src="/app/assets/me.jpg"
+                  alt="Daniel"
                   layout="fill"
                   objectFit="cover"
                   className="transition-transform hover:scale-105 duration-500"
