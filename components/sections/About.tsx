@@ -33,7 +33,7 @@ export default function About() {
             >
               <div className="relative w-full h-[400px] overflow-hidden rounded-lg">
                 <Image
-                  src="/app/assets/me.jpg"
+                  src="/me.jpg"
                   alt="Daniel"
                   layout="fill"
                   objectFit="cover"
