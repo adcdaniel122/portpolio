@@ -43,7 +43,7 @@ export default function About() {
               </div>
               <div className="absolute -bottom-4 -right-4 w-40 h-40 rounded-lg border-8 border-background bg-muted/30 z-10 flex items-center justify-center">
                 <p className="text-sm font-medium text-center">
-                  <span className="block text-4xl font-bold text-primary mb-1">5+</span>
+                  <span className="block text-4xl font-bold text-primary mb-1">7+</span>
                   Years of Experience
                 </p>
               </div>
