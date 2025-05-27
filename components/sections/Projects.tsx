@@ -94,9 +94,8 @@ export default function Projects() {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-transform duration-500 group-hover:scale-105"
+                      fill
+                      className="transition-transform duration-500 group-hover:scale-105 object-cover"
                     />
                     {project.featured && (
                       <div className="absolute top-3 right-3">

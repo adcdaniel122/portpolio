@@ -35,9 +35,8 @@ export default function About() {
                 <Image
                   src="/me.jpg"
                   alt="Daniel"
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform hover:scale-105 duration-500"
+                  fill
+                  className="transition-transform hover:scale-105 duration-500 object-cover"
                   priority
                 />
               </div>
