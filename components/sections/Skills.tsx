@@ -8,7 +8,7 @@ const skillsData = [
   { name: 'React / Next.js', level: 95, category: 'frontend' },
   { name: 'Vue2 / Vue3 / Nuxt.js', level: 100, category: 'frontend' },
   { name: 'React Native / Flutter / Ionic', level: 100, category: 'frontend' },
-  { name: 'Payload CMS / Strapy / Wordpress', level: 95, category: 'frontend' },
+  { name: 'Payload CMS / Strapi / Wordpress', level: 95, category: 'frontend' },
   { name: 'Laravel / Php', level: 95, category: 'frontend' },
   { name: 'TypeScript / JavaScript', level: 95, category: 'frontend' },
   { name: 'HTML5 / CSS3', level: 92, category: 'frontend' },

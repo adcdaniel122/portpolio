@@ -69,7 +69,7 @@ export default function Contact() {
           <div className="w-20 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
             Have a project in mind or just want to say hello? Feel free to reach out. 
-            I'm always open to discussing new projects and opportunities.
+            I am always open to discussing new projects and opportunities.
           </p>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
