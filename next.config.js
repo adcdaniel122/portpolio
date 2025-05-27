@@ -5,14 +5,6 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: { unoptimized: true },
-  experimental: {
-    fontLoaders: [
-      {
-        loader: '@next/font/google',
-        options: { timeout: 60000 } // Increase timeout to 60 seconds
-      }
-    ]
-  }
 };
 
 module.exports = nextConfig;
